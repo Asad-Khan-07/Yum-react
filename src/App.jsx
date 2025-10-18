@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './navbar'
 import Body from './body'
 import Header from './header'
+// import Add from './add'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -13,6 +14,7 @@ function App() {
     <Navbar/>
     <Header/>
     <Body/>
+    {/* <Add/> */}
     </>
   )
 }
