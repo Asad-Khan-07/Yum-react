@@ -91,8 +91,7 @@ export default function Example() {
             <MenuItem>
               <button
                 type="submit"
-                className="block w-full px-4 py-2 text-left text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden"
-              >
+                className="block w-full px-4 py-2 text-left text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden">
                 Blog sidebar page
               </button>
             </MenuItem>
@@ -136,7 +135,7 @@ export default function Example() {
               </div>
             </div>
           </div>
-          <div className="absolute inset-y-0 right-0 flex items-center justify-around  pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 ">
+          <div className="absolute inset-y-0 right-0 flex items-center justify-around w-2xs pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 ">
             <button
               type="button"
               className="relative rounded-full p-1 text-gray-900 hover:text-gray-400 focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500"
