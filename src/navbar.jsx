@@ -2,6 +2,13 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { Bars3Icon, BellIcon, XMarkIcon,ChevronDownIcon } from '@heroicons/react/24/outline'
 import Header from './header'
 import Body from './body'
+import { useContext, useState } from 'react';
+import  { themeContext} from './mode'
+
+
+
+// const {mode}=Background
+
 
 const navigation = [
   { name: 'Home', href: '#', current: false },
@@ -15,8 +22,27 @@ function classNames(...classes) {
 }
 
 export default function Example() {
+  
+  
+const {mode, setMode} = useContext(themeContext);
+
+
+
+
+
+// const show=(e)=>{
+//   // setMode(true)
+   
+//   console.log(mode);
+// }
+
+// show()
+
+
+
+
   return (
-    <Disclosure as="nav" className="relative bg-transparent ">
+    <Disclosure as="nav" className="fixed bg-white  z-20 w-full ">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -91,7 +117,7 @@ export default function Example() {
             <MenuItem>
               <button
                 type="submit"
-                className="block w-full px-4 py-2 text-left text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden">
+                className="block w-full px-4 py-2 text-left text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden"   >
                 Blog sidebar page
               </button>
             </MenuItem>
@@ -136,6 +162,8 @@ export default function Example() {
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center justify-around w-2xs pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 ">
+  
+
             <button
               type="button"
               className="relative rounded-full p-1 text-gray-900 hover:text-gray-400 focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500"
@@ -143,11 +171,23 @@ export default function Example() {
             Sign in
             </button>
                 {/* <a class="ease-in-up hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-9 lg:px-6 xl:px-9 bg-amber-700" href="/startup-nextjs/signup">Sign Up</a> */}
-                <button className='ease-in-up hidden rounded-sm bg-primary px-8 py-3 text-center font-medium h-12 bg-blue-600 text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block '>Sign Up</button>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 text-gray-900">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
-              </svg>
-                
+                <button className='ease-in-up hidden rounded-sm bg-primary px-8 py-3 text-center font-medium h-12 bg-blue-600 text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block '
+                >Sign Up</button>
+              
+
+
+
+            <button
+            onClick={(e) => {
+            e.stopPropagation();
+            setMode(!mode)
+            console.log(mode);
+              }}
+          className="relative z-50 bg-blue-600 text-white px-4 py-2 rounded-4xl">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 text-white transition duration-300">
+          <path strokeLinecap="round" strokeLinejoin="round"  d={mode?"M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z":"M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"} />
+          </svg>
+          </button>              
 
           </div>
         </div>
