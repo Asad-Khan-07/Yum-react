@@ -5,32 +5,30 @@ import Body from './body'
 import Header from './header'
 // import Add from './add'
 import { themeContext } from './mode'
+import Example from './client&admin'
+import Clientadmin from './client&admin'
+import Client from './client'
+import Adminpanel from './Adminpanel'
+import Authpages from './Authpages'
+import Extrapages from './Extrapages'
+import Awesomefeature from './Awesomefeature'
+import Footer from './footer'
 function App() {
   // const [count, setCount] = useState(0)
     const [mode,setMode]=useState(false)
   return (
     <>
-    {/* <div className=''>hello world</div> */}
      <themeContext.Provider value={{mode,setMode}}>
-    <Navbar/>
     <Header/>
-    <Body/>
+    <Clientadmin/>
+    <Client/>
+    <Adminpanel/>
+    <Authpages/>
+    <Extrapages/>
+    <Awesomefeature/>
+    <Footer/>
   </themeContext.Provider>
-  {/* <productContext.Provider value={{user,setUser}}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Form/>} />
-          <Route path="/layout" element={<Layout />} />
-        </Routes>
-      </BrowserRouter>
-    <ToastContainer/>
-    </productContext.Provider> */}
-
-
-
-
-
-    {/* <Add/> */}
+ 
     </>
   )
 }
