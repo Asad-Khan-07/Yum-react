@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 const posts = [
         {
             url:"M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1",
@@ -70,7 +71,14 @@ Feature</button>
             </div> */}
 
                 {posts.map((each,index)=>(
-                    <div key={index} className="p-5 shadow-lg rounded-lg cursor-pointer flex flex-col items-center hover:-translate-y-1  transition duration-500 delay-100 ease-in-out">
+                    <motion.div 
+                    
+           initial={{opacity:0}}
+           whileInView={{opacity:1}}
+           transition={{duration:2}}
+           viewport={{ once: true}}
+           
+                    key={index} className="p-5 shadow-lg rounded-lg cursor-pointer flex flex-col items-center hover:-translate-y-1  transition duration-500 delay-100 ease-in-out">
                         <div className="p-2 bg-orange-100 rounded-md">
                         <svg stroke="currentColor" fill="none" className="text-amber-600" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d={each.url}></path><polygon points="12 15 17 21 7 21 12 15"></polygon></svg>
                         </div>
@@ -78,7 +86,7 @@ Feature</button>
                             
                             <h1 className="text-gray-900 text-center font-bold mt-5y">{each.heading}</h1>
                             <p className="text-gray-600 font-semibold mt-2">{each.para}</p>
-                    </div>
+                    </motion.div>
                 ))}
 
         </div>

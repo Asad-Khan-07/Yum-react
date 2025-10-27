@@ -1,12 +1,17 @@
 import React from 'react'
-
+import { motion } from 'framer-motion'
 const Body = () => {
   return (
     <>
           <div className="bg-linear-to-b from-amber-50 to-pink-200 ">
       <div className="mx-auto p-10">
         <div className=" grid  grid-cols-1 gap-x-8  justify-items-center lg:max-w-none lg:grid-cols-2">
-            <div className="flex flex-col gap-5 justify-center ">
+            <motion.div 
+             initial={{opacity:0}}
+    whileInView={{opacity:1}}
+    transition={{duration:2}}
+    viewport={{ once: true }}
+            className="flex flex-col gap-5 justify-center ">
               <h1 className="text-amber-900 font-bold text-3xl">Multipurpose <span className="text-orange-600">Food</span>  Client & Admin App with Tailwind</h1>
               <h3 className="text-gray-500 font-medium text-2xl">Discover the ease of having your preferred dishes delivered straight to your door. 🚪</h3>
             <button className="flex bg-amber-600 p-2 rounded-3xl text-amber-50 w-50 justify-center hover:-translate-y-1 transition duration-500 delay-150 ease-out cursor-pointer  gap-1 ">
@@ -18,10 +23,15 @@ const Body = () => {
               View Demos
 
             </button>
-            </div>
-            <div className="mb:mt-2 sm:mt-2 lg:mt-0 "> 
+            </motion.div>
+            <motion.div 
+             initial={{opacity:0}}
+    whileInView={{opacity:1}}
+    transition={{duration:2}}
+    viewport={{ once: true }}
+            className="mb:mt-2 sm:mt-2 lg:mt-0  "> 
               <img className="rounded-md shadow-md h-2/2" src="https://themes.coderthemes.com/yum_r/assets/1-S2wonqkS.png" alt="" />
-            </div>
+            </motion.div>
         </div>
       </div>
         <div className='mt-20 text-center flex flex-col gap-10 items-center p-10'>

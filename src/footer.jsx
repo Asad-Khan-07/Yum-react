@@ -1,68 +1,17 @@
-const posts = [
-        {
-            url:"https://themes.coderthemes.com/yum_r/assets/1-S2wonqkS.png",
-            heading:"FAQs"
-        },
-        {
-            url:"https://themes.coderthemes.com/yum_r/assets/1-S2wonqkS.png",
-            heading:"Error 404"
-        },
-        {
-            url:"https://themes.coderthemes.com/yum_r/assets/1-S2wonqkS.png",
-            heading:"Contact Us"
-        },
-        {
-            url:"https://themes.coderthemes.com/yum_r/assets/1-S2wonqkS.png",
-            heading:"Dish Details"
-        },
-        {
-            url:"https://themes.coderthemes.com/yum_r/assets/1-S2wonqkS.png",
-            heading:"Add Dish"
-        },
-        {
-            url:"https://themes.coderthemes.com/yum_r/assets/1-S2wonqkS.png",
-            heading:"Edit Dish"
-        },
-        {
-            url:"https://themes.coderthemes.com/yum_r/assets/1-S2wonqkS.png",
-            heading:"Customer List"
-        },
-        {
-            url:"https://themes.coderthemes.com/yum_r/assets/1-S2wonqkS.png",
-            heading:"Add Customer"
-        },
-        {
-            url:"https://themes.coderthemes.com/yum_r/assets/1-S2wonqkS.png",
-            heading:"Edit Customer"
-        },
-        {
-            url:"https://themes.coderthemes.com/yum_r/assets/1-S2wonqkS.png",
-            heading:"Seller List "
-        },
-        {
-            url:"https://themes.coderthemes.com/yum_r/assets/1-S2wonqkS.png",
-            heading:"Seller Details"
-        },
-        {
-            url:"https://themes.coderthemes.com/yum_r/assets/1-S2wonqkS.png",
-            heading:"Add Seller"
-        },
-        {
-            url:"https://themes.coderthemes.com/yum_r/assets/1-S2wonqkS.png",
-            heading:"Edit Seller"
-        },
-        {
-            url:"https://themes.coderthemes.com/yum_r/assets/1-S2wonqkS.png",
-            heading:"Profile"
-        }
-
-    ]
-
+import { motion } from "framer-motion"
 export default function Footer() {
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div className="bg-white py-24 sm:py-2">
       <div className="mx-auto  px-6 text-center lg:px-8">
         <div className="mx-auto m lg:mx-0 flex flex-col justify-around items-center gap-5">
+       <motion.h3
+       
+           initial={{scale:1}}
+           whileHover={{scale:1.2}}
+           transition={{duration:0.5, ease:"easeIn"}}
+        //    viewport={{ once: true}}
+           
+       className="text-4xax-w-2xl  tracking-tight text-pretty text-amber-900 sm:text-2xs mb-10 font-semibold">All these sounds yummy, right? Wait until you purchase it. 😉</motion.h3>
           <img
                 alt="Your Company"
                 src="https://themes.coderthemes.com/yum_r/assets/logo-dark-Be4neTbs.png"

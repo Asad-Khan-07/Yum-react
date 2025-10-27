@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 const posts = [
         {
             url:"https://themes.coderthemes.com/yum_r/assets/8-1a5NBkQy.png",
@@ -76,10 +77,17 @@ Helper</button>
             </div> */}
 
                 {posts.map((each,index)=>(
-                    <div key={index} className="p-5 shadow-lg rounded-lg cursor-pointer flex flex-col items-center hover:-translate-y-1  transition duration-500 delay-100 ease-in-out">
+                    <motion.div
+                    
+           initial={{opacity:0}}
+           whileInView={{opacity:1}}
+           transition={{duration:2}}
+           viewport={{ once: true}}
+           
+                    key={index} className="p-5 shadow-lg rounded-lg cursor-pointer flex flex-col items-center hover:-translate-y-1  transition duration-500 delay-100 ease-in-out">
                         <img src={each.url} alt="" />
                             <h1 className="text-amber-900 font-bold mt-5y">{each.heading}</h1>
-                    </div>
+                    </motion.div>
                 ))}
 
         </div>
