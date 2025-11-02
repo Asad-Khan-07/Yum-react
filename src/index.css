@@ -2,3 +2,16 @@
 @theme{
     --breakpoint-mb:250px
 }
+
+    body::-webkit-scrollbar {
+        width: 7px; 
+        height: 10px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background:oklch(66.6% 0.179 58.318);
+        border-radius: 2px;
+    }
+html{
+    scroll-behavior:smooth;
+}

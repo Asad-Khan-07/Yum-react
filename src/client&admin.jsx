@@ -12,6 +12,9 @@ const posts = [
 
 export default function Clientadmin() {
   return (
+    <>
+    <section id="Demos">
+
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto  px-6 text-center lg:px-8">
         <div
@@ -30,7 +33,7 @@ export default function Clientadmin() {
            viewport={{ once: true }}
 
             className="p-5 shadow-lg rounded-lg cursor-pointer flex flex-col items-center hover:-translate-y-1  transition duration-500 delay-100 ease-in-out">
-                <img src={posts[0].url} alt="" className="rounded-md " />
+                <img src={posts[0].url} alt="demo-img" className="rounded-md " />
                 <h3 className="text-amber-900 font-bold mt-5y"> {posts[0].heading}</h3>
         {/* <img src="" alt="demo-img" class="w-full rounded-lg border border-default-100"></img> */}
             </motion.div>
@@ -41,7 +44,7 @@ export default function Clientadmin() {
            transition={{duration:2}}
            viewport={{ once: true }}
             className="p-5 shadow-lg rounded-lg cursor-pointer flex flex-col items-center hover:-translate-y-1  transition duration-500 delay-100 ease-in-out">
-<img src={posts[1].url} alt="demo-img" class="w-full rounded-lg"/>
+<img src={posts[1].url} alt="demo-img" class=" rounded-lg"/>
                 <h3 className="text-amber-900 font-bold mt-5">
                     {posts[1].heading}
                 </h3>
@@ -50,5 +53,7 @@ export default function Clientadmin() {
         </div>
       </div>
     </div>
+    </section>
+    </>
   )
 }

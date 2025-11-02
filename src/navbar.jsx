@@ -2,9 +2,9 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Home', href: '#', current: true },
-  { name: 'Demos', href: '#', current: false },
-  { name: 'Feature', href: '#', current: false }
+  { name: 'Home', href: '#home', current: true },
+  { name: 'Demos', href: '#Demos', current: false },
+  { name: 'Feature', href: '#feature', current: false }
 ]
 
 function classNames(...classes) {
@@ -13,7 +13,7 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <Disclosure as="nav" className="relative bg-amber-50 shadow-md"> 
+    <Disclosure as="nav" className="fixed top-0 bg-amber-50 shadow-md w-full z-20"> 
       <div className="mx-auto">
         <div className="relative flex h-16 items-center justify-around w-full">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden ">
